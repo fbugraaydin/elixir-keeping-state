@@ -2,7 +2,7 @@
 
 There are some elixir team members. You can manage the team by using add, remove, list actions.
 
-You have 3 approach here to make this:
+You have 3 approaches here to make this:
 
     - Keeping state on your own hands with mail box by using receive/do => ElixirTeamBasic
 

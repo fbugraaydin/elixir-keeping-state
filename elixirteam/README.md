@@ -7,7 +7,7 @@ iex -S mix
 
 {:ok, spid} = ElixirTeam.Supervisor.start_link([])
 
-[{,pid,,_}] = Supervisor.which_children(spid)
+[{_,pid,_,_}] = Supervisor.which_children(spid)
 
 ElixirTeam.MyGenServer.add(pid,"name1")
 

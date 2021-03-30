@@ -23,20 +23,25 @@ defmodule ElixirTeam.MyGenServer do
 
   # Server APIs
 
+  @impl true
   def init(:ok) do
     {:ok, []}
   end
 
+  @impl true
   def handle_cast({:add, name}, state) do
     new_state = state ++ [name]
     {:noreply, new_state}
   end
 
+  @impl true
   def handle_cast({:remove, name}, state) do
+    Process.sleep(5000)
     new_state  = Enum.reject(state, fn x -> x == name end)
     {:noreply, new_state}
   end
 
+  @impl true
   def handle_call(:team, _from, state) do
     {:reply, state, state}
   end

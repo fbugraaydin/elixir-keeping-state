@@ -36,7 +36,6 @@ defmodule ElixirTeam.MyGenServer do
 
   @impl true
   def handle_cast({:remove, name}, state) do
-    Process.sleep(5000)
     new_state  = Enum.reject(state, fn x -> x == name end)
     {:noreply, new_state}
   end

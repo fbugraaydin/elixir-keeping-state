@@ -23,7 +23,7 @@ defmodule ElixirTeamBasic do
 
 end
 
-# pid = TeamBasic.start_link
+# pid = ElixirTeamBasic.start_link
 # send(pid, {:add, "name1"})
 # send(pid, {:remove,"name1"})
 # send(pid, {:team, self()})
